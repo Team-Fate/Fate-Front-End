@@ -1,1 +1,16 @@
-<p>sign-up works!</p>
+<form>
+  <label>First name:</label>
+  <input type="text" id="firstname" />
+  <label>Last name</label>
+  <input type="text" id="lastname" />
+  <label>Email:</label>
+  <input type="text" id="email" />
+  <label>Username:</label>
+  <input type="text" id="username" />
+  <label>Password:</label>
+  <input type="text" id="password" />
+  <label>Confirm Password:</label>
+  <input type="text" id="confirm-password" />
+  <button (click)="createAccountFunction($event)">Create Account</button>
+  <button (click)="cancelFunction($event)">Cancel</button>
+</form>

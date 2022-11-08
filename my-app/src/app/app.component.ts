@@ -8,11 +8,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'my-app';
   constructor(private _router: Router) { }
-  continueFunction(event: MouseEvent) {
-    this._router.navigate(['sign-in']);
-
-}
-  narrateFunction(event: MouseEvent) {
-    this._router.navigate(['sign-up']);
+  beginFunction(event: MouseEvent) {
+    this._router.navigate(['main']);
   }
+
 }
