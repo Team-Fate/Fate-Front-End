@@ -27,7 +27,7 @@ import { ActionItemComponent } from './action-item/action-item.component';
     CharacterStatsComponent,
     CharacterCreationComponent,
     CharacterTokenComponent,
-    CharacterModelComponent
+    CharacterModelComponent,
     SignUpComponent,
     SignInComponent,
     StoryComponent,
