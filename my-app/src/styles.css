@@ -26,6 +26,7 @@ p {
     font-size: 1.7em;
     border: 2px solid;
     font-family: Asher Punk Demo Version;
+    text-shadow: 0 0 3px #fff, 0 0 3px rgb(215, 210, 210), 0 0 5px #c035e3, 0 0 4px #9411a0, 0 0 7px #f115f5, 0 0 5px #ca15e1, 0 0 5px #000000;
 }
 
 .glow-on-hover {
@@ -34,7 +35,7 @@ p {
     /* border: none; */
     border-color:#7a00ff;
     outline: none;
-    color: #fff;
+    color: rgb(112, 9, 208);
     background: rgb(7, 7, 7);
     cursor: pointer;
     position: relative;
