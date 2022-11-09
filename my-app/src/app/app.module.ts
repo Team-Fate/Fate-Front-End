@@ -21,6 +21,7 @@ import { StatusBarComponent } from './status-bar/status-bar.component';
 import { CombatComponent } from './combat/combat.component';
 import { ActionListComponent } from './action-list/action-list.component';
 import { ActionItemComponent } from './action-item/action-item.component';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { ActionItemComponent } from './action-item/action-item.component';
     CombatComponent,
     ActionListComponent,
     ActionItemComponent,
+    MainComponent,
  
   ],
   imports: [
