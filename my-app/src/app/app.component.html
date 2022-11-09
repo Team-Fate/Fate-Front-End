@@ -1,5 +1,8 @@
 <div>
-   <h1>Your Fate</h1>
-  <button (click)="beginFunction($event)" type="button">Begin</button>
+  <h1>Your Fate</h1>
+  <div *ngIf="toDisplay">
+    <button (click)="narrateFunction($event)" type="button">Narrate</button>
+    <button (click)="continueFunction($event)" type="button">Continue</button>
+  </div>
 </div>
 <router-outlet></router-outlet>
