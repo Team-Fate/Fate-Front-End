@@ -1,16 +1,18 @@
-<form>
+<form [formGroup]="form" (ngSubmit)="submit()">
   <label>First name:</label>
-  <input type="text" id="firstname" />
+  <input type="text" formControlName="firstname" />
   <label>Last name</label>
-  <input type="text" id="lastname" />
+  <input type="text" formControlName="lastname" />
   <label>Email:</label>
-  <input type="text" id="email" />
+  <input type="text" formControlName="email" />
   <label>Username:</label>
-  <input type="text" id="username" />
+  <input type="text" formControlName="username" />
   <label>Password:</label>
-  <input type="text" id="password" />
-  <label>Confirm Password:</label>
-  <input type="text" id="confirm-password" />
-  <button (click)="createAccountFunction($event)">Create Account</button>
-  <button (click)="cancelFunction($event)">Cancel</button>
+  <input type="text" formControlName="password" />
+  <!-- <label>Confirm Password:</label>
+  <input type="text" formControlName="confirmPassword" /> -->
+  <button class="btn glow-on-hover" type="submit">Create Account</button>
+  <button class="btn glow-on-hover" type="button" (click)="cancelFunction()">
+    Cancel
+  </button>
 </form>

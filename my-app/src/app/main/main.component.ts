@@ -4,27 +4,23 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
+  toDisplay = true;
+  constructor(private _router: Router) {}
 
-   toDisplay = true;
-  constructor(private _router: Router) { }
-   toggleData() {
-    this.toDisplay = !this.toDisplay
+  toggleData() {
+    this.toDisplay = !this.toDisplay;
   }
-  narrateFunction(event: MouseEvent) {
+  narrateFunction() {
     this._router.navigate(['sign-up']);
     this.toggleData();
   }
-  continueFunction(event: MouseEvent) {
+  continueFunction() {
     this._router.navigate(['sign-in']);
     this.toggleData();
-
-
-}
-
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {}
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +22,7 @@ import { CombatComponent } from './combat/combat.component';
 import { ActionListComponent } from './action-list/action-list.component';
 import { ActionItemComponent } from './action-item/action-item.component';
 import { MainComponent } from './main/main.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,14 +45,15 @@ import { MainComponent } from './main/main.component';
     ActionListComponent,
     ActionItemComponent,
     MainComponent,
- 
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

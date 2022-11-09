@@ -12,7 +12,7 @@ export class SignInComponent implements OnInit {
     this._router.navigate(['character-list']);
   }
   cancelFunction(event: MouseEvent) {
-    this._router.navigate(['app']);
+    this._router.navigate(['']);
   }
   ngOnInit(): void {
   }
