@@ -1,8 +1,8 @@
-<form>
+<form [formGroup]="form" (ngSubmit)="submit()">
   <label>Username:</label>
-  <input type="text" id="username" />
+  <input type="text" formControlName="username" />
   <label>Password:</label>
-  <input type="text" id="password" />
-  <button (click)="enterFunction($event)">Enter</button>
-  <button (click)="cancelFunction($event)">Cancel</button>
+  <input type="text" formControlName="password" />
+  <button class="btn glow-on-hover" type="submit">Enter</button>
+  <button class="btn glow-on-hover" (click)="cancelFunction()">Cancel</button>
 </form>
