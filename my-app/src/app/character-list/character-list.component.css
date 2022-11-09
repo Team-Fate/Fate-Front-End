@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     border: 3px solid rgb(80, 107, 205);
+    
 }
 
 .character-tokens {
