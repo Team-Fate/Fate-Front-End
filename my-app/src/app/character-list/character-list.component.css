@@ -1,0 +1,21 @@
+.character-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-rows: minmax(250px, auto);
+    grid-gap: 1rem;
+    margin:  auto;
+    max-width: 200px;
+    padding: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(80, 107, 205);
+}
+
+.character-tokens {
+    display:flex;
+    flex-direction: column;
+    max-width: 100px;
+}
