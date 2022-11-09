@@ -5,6 +5,11 @@ body {
     font-family: Cyberwar;
     background-color: black;
     text-shadow: 0 0 3px #fff, 0 0 10px rgb(215, 210, 210), 0 0 10px #c035e3, 0 0 10px #9411a0, 0 0 15px #f115f5, 0 0 20px #ca15e1, 0 0 20px #000000;
+    background-image: url("ryiin-c-t7w4NnjOwDk-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
 }
 
 h1 {
