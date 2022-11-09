@@ -22,6 +22,7 @@ import { CombatComponent } from './combat/combat.component';
 import { ActionListComponent } from './action-list/action-list.component';
 import { ActionItemComponent } from './action-item/action-item.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { ActionItemComponent } from './action-item/action-item.component';
     StatusBarComponent,
     CombatComponent,
     ActionListComponent,
-    ActionItemComponent
+    ActionItemComponent,
+ 
   ],
   imports: [
     HttpClientModule,
