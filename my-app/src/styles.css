@@ -104,6 +104,24 @@ p {
     }
 }
 
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 17em;
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
 /* iphone 12 media query */
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {}
 
