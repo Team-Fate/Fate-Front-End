@@ -13,4 +13,12 @@ export class FetchDataService {
         console.log(res);
       });
   }
+
+  signIn(data: Object) {
+    return this.httpClient
+      .post('https://your-fate-back-end.herokuapp.com/api/users/signin', data)
+      .subscribe((res) => {
+        console.log(res);
+      });
+  }
 }
