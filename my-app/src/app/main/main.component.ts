@@ -9,13 +9,6 @@ import { Router } from '@angular/router';
 export class MainComponent implements OnInit {
   constructor(private _router: Router) {}
 
-  displayHeader = false;
-  stageMain = true;
-  stageCharacterCreation = false;
-  stageCharacterList = false;
-  stageStoty = false;
-  stageCombat = false;
-
   narrateFunction() {
     this._router.navigate(['sign-up']);
   }

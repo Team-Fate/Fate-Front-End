@@ -1,8 +1,10 @@
 <form class="form" [formGroup]="form" (ngSubmit)="submit()">
   <label>Username:</label>
   <input type="text" formControlName="username" />
+  <p *ngIf="username.errors && username.touched">This field can not be empty</p>
   <label>Password:</label>
   <input type="text" formControlName="password" />
+  <p *ngIf="password.errors && password.touched">This field can not be empty</p>
   <button class="btn glow-on-hover" type="submit">Enter</button>
   <button class="btn glow-on-hover" (click)="cancelFunction()">Cancel</button>
 </form>
