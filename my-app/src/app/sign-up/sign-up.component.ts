@@ -1,6 +1,6 @@
 import { FetchDataService } from './../services/fetch-data.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-sign-up',
@@ -14,18 +14,40 @@ export class SignUpComponent implements OnInit {
     private _router: Router
   ) {}
 
-  form = new FormGroup({
-    firstname: new FormControl<string>(''),
-    lastname: new FormControl<string>(''),
-    email: new FormControl<string>(''),
-    username: new FormControl<string>(''),
-    password: new FormControl<string>(''),
-    // confirmPassword: new FormControl<string>(''),
-  });
+  form = new FormGroup(
+    {
+      firstname: new FormControl<string>('', Validators.required),
+      lastname: new FormControl<string>('', Validators.required),
+      email: new FormControl<string>('', Validators.required),
+      username: new FormControl<string>('', Validators.required),
+      password: new FormControl<string>('', Validators.required),
+      // confirmPassword: new FormControl<string>(''),
+    },
+    Validators.required
+  );
+
+  get firstname() {
+    return this.form.controls.firstname as FormControl;
+  }
+  get lastname() {
+    return this.form.controls.lastname as FormControl;
+  }
+  get email() {
+    return this.form.controls.email as FormControl;
+  }
+  get username() {
+    return this.form.controls.username as FormControl;
+  }
+  get password() {
+    return this.form.controls.password as FormControl;
+  }
 
   submit() {
+    if (this.form.status == 'INVALID') {
+      return;
+    }
     const response = this.fetchDataService.signUp(this.form.value);
-    this._router.navigate(['']);
+    this._router.navigate(['character-creation']);
   }
 
   cancelFunction() {

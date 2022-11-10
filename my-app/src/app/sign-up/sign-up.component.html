@@ -1,14 +1,21 @@
 <form class="form" [formGroup]="form" (ngSubmit)="submit()">
   <label>First name:</label>
   <input type="text" formControlName="firstname" />
+  <p *ngIf="firstname.errors && firstname.touched">
+    This field can not be empty
+  </p>
   <label>Last name</label>
   <input type="text" formControlName="lastname" />
+  <p *ngIf="lastname.errors && lastname.touched">This field can not be empty</p>
   <label>Email:</label>
   <input type="text" formControlName="email" />
+  <p *ngIf="email.errors && email.touched">This field can not be empty</p>
   <label>Username:</label>
-  <input type="text" formControlName="username" />
+  <input type="text" formControlName="username" required />
+  <p *ngIf="username.errors && username.touched">This field can not be empty</p>
   <label>Password:</label>
-  <input type="text" formControlName="password" />
+  <input type="text" formControlName="password" required />
+  <p *ngIf="password.errors && password.touched">This field can not be empty</p>
   <!-- <label>Confirm Password:</label>
   <input type="text" formControlName="confirmPassword" /> -->
   <button class="btn glow-on-hover" type="submit">Create Account</button>
