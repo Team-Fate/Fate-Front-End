@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { CharacterCreationComponent } from './character-creation/character-creation.component';
+import { CharacterModelComponent } from './character-model/character-model.component';
+import { CharacterStatsComponent } from './character-stats/character-stats.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
