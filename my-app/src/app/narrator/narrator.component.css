@@ -1,0 +1,19 @@
+.game-intro {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  animation: typing 10s steps(100, end) forwards, blink 0.8s infinite;
+  font-size: 1.6rem;
+  width: 0;
+}
+.container {
+  display: inline-block;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
