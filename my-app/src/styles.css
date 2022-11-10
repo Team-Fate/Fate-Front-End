@@ -5,6 +5,11 @@ body {
     font-family: Cyberwar;
     background-color: black;
     text-shadow: 0 0 3px #fff, 0 0 10px rgb(215, 210, 210), 0 0 10px #c035e3, 0 0 10px #9411a0, 0 0 15px #f115f5, 0 0 20px #ca15e1, 0 0 20px #000000;
+    background-image: url("ryiin-c-t7w4NnjOwDk-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
 }
 
 h1 {
@@ -25,6 +30,7 @@ p {
     align-items: center;
     font-size: 1.7em;
     border: 2px solid;
+    margin: 0 auto;
     font-family: Asher Punk Demo Version;
     text-shadow: 0 0 3px #fff, 0 0 3px rgb(215, 210, 210), 0 0 5px #c035e3, 0 0 4px #9411a0, 0 0 7px #f115f5, 0 0 5px #ca15e1, 0 0 5px #000000;
 }
@@ -97,6 +103,29 @@ p {
         background-position: 0 0;
     }
 }
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 17em;
+}
+
+.center {
+    margin: 0 auto;
+    padding-top: 21em;
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
 
 /* iphone 12 media query */
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {}
