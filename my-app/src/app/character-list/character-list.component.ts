@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CharacterModelComponent } from '../character-model/character-model.component';
 import { CharacterTokenComponent } from '../character-token/character-token.component';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,15 +16,28 @@ export class CharacterListComponent implements OnInit {
 
   characterList: any;
 
+  currentCharacter: any
+
   ngOnInit(): void {
     this.getCharacters();
   }
 
+  
   getCharacters() {
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `bearer ${localStorage['token']}`
+    })
+
+    const requestOptions = { headers: headers }
+
     this.httpClient
-      .get('https://your-fate-back-end.herokuapp.com/api/characters')
+      .get('https://your-fate-back-end.herokuapp.com/api/characters', requestOptions)
       .subscribe((res: any) => {
         this.characterList = res;
+        this.currentCharacter=this.characterList[0]
+        console.log(this.characterList)
       });
   }
 
