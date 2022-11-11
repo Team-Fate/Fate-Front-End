@@ -16,6 +16,8 @@ export class CharacterListComponent implements OnInit {
 
   characterList: any;
 
+  currentCharacter: any
+
   ngOnInit(): void {
     this.getCharacters();
   }
@@ -34,6 +36,8 @@ export class CharacterListComponent implements OnInit {
       .get('https://your-fate-back-end.herokuapp.com/api/characters', requestOptions)
       .subscribe((res: any) => {
         this.characterList = res;
+        this.currentCharacter=this.characterList[0]
+        console.log(this.characterList)
       });
   }
 

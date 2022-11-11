@@ -1,13 +1,19 @@
 <div>
   <h2>Choose Your Character</h2>
-  <div class="character-tokens">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
+  <div *ngFor="let character of characterList">
+    <div class="character-tokens">
+     <img src={{character.image}} />
+    </div>
+    <p>{{character.name}}</p>
+    <h4>{{character.story.name}}</h4>
   </div>
   <div class="character-container">
     <p>Character</p>
-    <div class="card"></div>
+    <div class="card">
+     <img src={{currentCharacter.model}} />
+    </div>
   </div>
-  <button class="glow-on-hover btn" (click)="continueFunction()">Continue</button>
+  <button class="glow-on-hover btn" (click)="continueFunction()">
+    Continue
+  </button>
 </div>
