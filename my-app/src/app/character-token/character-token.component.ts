@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-character-token',
   templateUrl: './character-token.component.html',
-  styleUrls: ['./character-token.component.css']
+  styleUrls: ['./character-token.component.css'],
 })
 export class CharacterTokenComponent implements OnInit {
+  @Input() character: any;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
