@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RollDiceService } from '../services/roll-dice.service'
 
 @Component({
   selector: 'app-character-stats',
@@ -7,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterStatsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private rollDice: RollDiceService) { 
 
+  }
+ stats = {
+  s: null,
+  d: null,
+  c: null,
+
+}
   ngOnInit(): void {
   }
 
