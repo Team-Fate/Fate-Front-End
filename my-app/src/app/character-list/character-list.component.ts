@@ -16,32 +16,38 @@ export class CharacterListComponent implements OnInit {
 
   characterList: any;
 
-  currentCharacter: any
+  currentCharacter: any;
 
   ngOnInit(): void {
     this.getCharacters();
   }
 
-  
   getCharacters() {
-
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': `bearer ${localStorage['token']}`
-    })
+      Authorization: `bearer ${localStorage['token']}`,
+    });
 
-    const requestOptions = { headers: headers }
+    const requestOptions = { headers: headers };
 
     this.httpClient
-      .get('https://your-fate-back-end.herokuapp.com/api/characters', requestOptions)
+      .get(
+        'https://your-fate-back-end.herokuapp.com/api/characters',
+        requestOptions
+      )
       .subscribe((res: any) => {
         this.characterList = res;
-        this.currentCharacter=this.characterList[0]
-        console.log(this.characterList)
+        this.currentCharacter = this.characterList[0];
+        console.log(this.characterList);
       });
   }
 
+  selectCharacter(character: any) {
+    this.currentCharacter = character;
+  }
   continueFunction() {
-    this._router.navigate(['story']);
+    this._router.navigate(['story'], {
+      queryParams: { character: this.currentCharacter._id },
+    });
   }
 }
