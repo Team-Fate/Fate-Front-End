@@ -1,13 +1,30 @@
-.game-intro {
+.c1 {
   overflow: hidden;
-  border-right: 0.15em solid orange;
   white-space: nowrap;
-  animation: typing 10s steps(100, end) forwards, blink 0.8s infinite;
-  font-size: 1.6rem;
+  animation: typing 1.5s steps(50, end) forwards, blink 0.8s infinite;
+  font-size: 1.8rem;
+  width: 0;
+}
+.c2 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(50, end) forwards, blink 0.8s infinite;
+  animation-delay: 2.5s;
+  font-size: 1.8rem;
+  width: 0;
+}
+.c3 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(50, end) forwards, blink 0.8s infinite;
+  animation-delay: 6s;
+  font-size: 1.8rem;
   width: 0;
 }
 .container {
   display: inline-block;
+  margin-top: 35%;
+  margin-left: 5%;
 }
 @keyframes typing {
   from {
@@ -16,4 +33,8 @@
   to {
     width: 100%;
   }
+}
+
+div {
+  display: flexbox;
 }
