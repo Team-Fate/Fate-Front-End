@@ -5,23 +5,7 @@
   font-size: 1.8rem;
   width: 0;
 }
-.c2 {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(50, end) forwards, blink 0.8s infinite;
-  animation-delay: 2.5s;
-  font-size: 1.8rem;
-  width: 0;
-}
-.c3 {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(50, end) forwards, blink 0.8s infinite;
-  animation-delay: 6s;
-  font-size: 1.8rem;
-  width: 0;
-}
-.container {
+.narrator {
   display: inline-block;
   margin-top: 35%;
   margin-left: 5%;

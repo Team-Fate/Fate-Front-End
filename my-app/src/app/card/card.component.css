@@ -32,7 +32,7 @@
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+.flip-card-rotate .flip-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -58,4 +58,9 @@
   background-color: black;
   color: rgb(1, 1, 1);
   transform: rotateY(180deg);
+}
+
+.flip-card-back > img {
+  height: 50%;
+  width: auto;
 }

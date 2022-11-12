@@ -1,5 +1,5 @@
 import { FetchDataService } from './../services/fetch-data.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -13,6 +13,7 @@ export class StoryComponent implements OnInit {
   templateCSS: any;
   tokenPositionCSS: any;
   cards: string[] = [];
+  narratorText: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -60,5 +61,9 @@ export class StoryComponent implements OnInit {
     styles.gridTemplateRows = `repeat(${storyRows}, 1fr)`;
     styles.gridTemplateColumns = `repeat(${storyColumns}, 1fr)`;
     return styles;
+  }
+
+  getNarratorTextFromCard(narratorText: any) {
+    this.narratorText = narratorText;
   }
 }

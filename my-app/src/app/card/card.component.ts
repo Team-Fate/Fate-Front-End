@@ -1,5 +1,5 @@
 import { FetchDataService } from './../services/fetch-data.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -8,7 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   @Input() cardId: any;
+  @Output() narratorText = new EventEmitter<String>();
   card: any;
+  rotateCSS: any;
+  rotate: any;
   constructor(private fetchData: FetchDataService) {}
 
   ngOnInit(): void {
@@ -18,5 +21,15 @@ export class CardComponent implements OnInit {
     this.fetchData.getCardById(this.cardId).subscribe((card: any) => {
       this.card = card;
     });
+    this.rotate = false;
+  }
+
+  flipCard(event: any) {
+    console.log(event);
+    if (!this.rotate) {
+      this.rotateCSS = 'flip-card-rotate';
+      this.rotate = true;
+      this.narratorText.emit(this.card.description);
+    }
   }
 }
