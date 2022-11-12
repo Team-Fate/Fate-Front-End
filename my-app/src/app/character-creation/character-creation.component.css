@@ -1,3 +1,159 @@
 .stat-list {
     list-style-type: none;
 }
+
+.creation-div {
+    margin: auto;
+    width: auto;
+}
+
+.character-name {
+    font-size: 40px;
+}
+
+.name-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+
+.sprite-header {
+    text-align: center;
+}
+
+.text-input {
+    width: 200px;
+    height: 30px;
+    margin-left: 20px;
+    border: solid 2px;
+    border-color: #7a00ff;
+    border-radius: 10px;
+    background-color: rgb(7, 7, 7);
+}
+
+.creation-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.creation-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 55vh;
+    margin-left: 150px;
+    width: 30%;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+}
+
+.sprite {
+    height: 75%;
+    border: 2px solid;
+    background-color: rgb(7, 7, 7);
+    padding-bottom: 60px;
+    padding-left: 50px;
+}
+
+.creation-model {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    align-items: center;
+    margin-right: 150px;
+}
+
+.sprite-header {
+    font-size: 35px;
+}
+
+.space {
+    margin: 5px;
+}
+
+.roll-stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.roll-button {
+    margin-left: 30px;
+    width: 30%;
+}
+
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    .creation-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+    }
+    .character-name {
+        margin-top: -10px;
+    }
+    .text-input {
+        margin-top: -30px;
+    }
+    .name-input {
+        display: flex;
+        flex-direction: column;
+        height: 0.5vh;
+    }
+    .sprite-header {
+        margin-top: 8px;
+        margin-bottom: 1px;
+    }
+    .creation-display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+    .creation-model {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+    }
+    .stats-header {
+        margin-top: 1px;
+        margin-bottom: -50px;
+    }
+    .creation-stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+    }
+    .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .roll-stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+    }
+    .roll-button {
+        margin: 0 auto;
+        width: auto;
+        margin-bottom: -50px;
+    }
+}

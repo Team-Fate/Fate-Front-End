@@ -1,9 +1,36 @@
-<form action="">
-  <p class="character-name">What is your name?</p>
-  <input type="text" />
-  <p>How will you look?<!-- import character model here --></p>
-<app-character-stats></app-character-stats>
-  <button class="creation-back" routerLink="/sign-up">BACK</button>
-  <button class="creation-confirm" routerLink="/character-list">CONFIRM</button>
-</form>
+<div class="creation-div">
+  <form class="" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="name-input">
+      <p class="character-name">What is your name?</p>
+      <input class="text-input" type="text" placeholder="Type Name Here!" formControlName='characterName'/>
+      <p *ngIf="characterName.errors && characterName.touched">This field can not be empty</p>
+    </div>
+
+    <div id="bottom-border"></div>
+
+    <div class="creation-display">
+      <div class="creation-model">
+        <p class="sprite-header">
+          Choose you're look!<!-- import character model here -->
+        </p>
+        <img class="sprite" src="{{ biker }}" alt="" />
+      </div>
+      <div class="creation-stats">
+        <p class="stats-header">ROLL YOUR STATS!</p>
+        <div class="roll-stats">
+          <app-character-stats></app-character-stats>
+          <button class="btn glow-on-hover roll-button">ROLL</button>
+        </div>
+        <div class="button">
+          <button class="btn glow-on-hover space" routerLink="/sign-up">
+            BACK
+          </button>
+          <button class="btn glow-on-hover space" routerLink="/character-list">
+            CONFIRM
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
 <p>character-creation works!</p>
