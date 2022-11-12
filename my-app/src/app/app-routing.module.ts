@@ -6,7 +6,10 @@ import { CharacterCreationComponent } from './character-creation/character-creat
 
 const routes: Routes = [
   { path: 'character-creation', component: CharacterCreationComponent },
-  { path: 'character-list', component: CharacterListComponent }
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'character-list', component: CharacterListComponent },
+  { path: 'story', component: StoryComponent },
+  { path: 'character-model', component: CharacterModelComponent }
 ];
 
 @NgModule({

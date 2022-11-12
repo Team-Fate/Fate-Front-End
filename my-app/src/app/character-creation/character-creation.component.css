@@ -1,3 +1,85 @@
 .stat-list {
     list-style-type: none;
 }
+.creation-div {
+    
+}
+.character-name {
+    font-size: 40px;
+}
+.name-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+#bottom-border {
+
+}
+.text-input {
+    width: 200px; height: 30px;
+    margin-left: 20px;
+    border: solid 2px;
+    border-color: #7a00ff;
+    border-radius: 10px;
+    background-color: rgb(7,7, 7);
+}
+.creation-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.creation-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:  55vh;
+    margin-left: 150px;
+    width: 30%;
+}
+.creation-button {
+    font-size: 1.7em;
+    border: 2px solid;
+    margin: 0 auto;
+    font-family: Asher Punk Demo Version;
+    text-shadow: 0 0 3px #fff, 0 0 3px rgb(215, 210, 210), 0 0 5px #c035e3, 0 0 4px #9411a0, 0 0 7px #f115f5, 0 0 5px #ca15e1, 0 0 5px #000000;
+    background-color: rgb(7,7, 7);
+}
+.button {
+    display: flex;
+    flex-direction: row;
+}
+.sprite {
+    height: 75%;
+    border: 2px solid;
+    background-color: rgb(7,7, 7);
+    padding-bottom: 60px;
+    padding-left: 50px;
+}
+.creation-model {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    align-items: center;
+    margin-right: 150px;
+}
+.sprite-header {
+    font-size: 35px;
+}
+.space {
+    margin: 5px;
+}
+.roll-stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+.roll-button {
+    margin-left: 110px;
+    width: 30%;
+}

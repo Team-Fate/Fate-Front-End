@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 export class CharacterCreationComponent implements OnInit {
 
   constructor(private router: Router,) { }
-
+  biker = 'assets/images/Biker_idle.png'
+  cyborg = 'assets/images/Cyborg_idle.png'
+  punk = 'assets/images/Punk_idle.png'
   ngOnInit(): void {
   }
 

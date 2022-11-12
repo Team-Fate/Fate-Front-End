@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterStatsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private rollDice: RollDiceService) { }
 
   ngOnInit(): void {
   }

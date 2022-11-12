@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character-model.component.css']
 })
 export class CharacterModelComponent implements OnInit {
+  constructor() {}
+  
+  
 
-  constructor() { }
+  
 
   ngOnInit(): void {
   }
