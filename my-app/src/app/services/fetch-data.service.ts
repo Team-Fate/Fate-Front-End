@@ -51,7 +51,10 @@ export class FetchDataService {
   }
 
   getCharacterById(id: any) {
-    return this.httpClient.get(this.apiUrl + 'characters/' + id, this.getHeaders());
+    return this.httpClient.get(
+      this.apiUrl + 'characters/' + id,
+      this.getHeaders()
+    );
   }
 
   getCharacters() {
@@ -68,5 +71,8 @@ export class FetchDataService {
         requestOptions
       )
       .subscribe((res: any) => {});
+  }
+  getCardById(id: any) {
+    return this.httpClient.get(this.apiUrl + 'cards/' + id, this.getHeaders());
   }
 }

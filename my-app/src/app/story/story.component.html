@@ -1,2 +1,10 @@
-<app-character-token [character]="this.character"></app-character-token>
-<app-narrator></app-narrator>
+<div class="story-container">
+  <div class="story" style="display: grid" [ngStyle]="this.templateCSS">
+    <app-card *ngFor="let card of this.cards" [cardId]="card"></app-card>
+    <app-character-token
+      [ngStyle]="this.tokenPositionCSS"
+      [character]="this.character"
+    ></app-character-token>
+  </div>
+  <app-narrator></app-narrator>
+</div>
