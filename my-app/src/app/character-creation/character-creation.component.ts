@@ -7,7 +7,7 @@ import { FetchDataService } from './../services/fetch-data.service';
 @Component({
   selector: 'app-character-creation',
   templateUrl: './character-creation.component.html',
-  styleUrls: ['./character-creation.component.css']
+  styleUrls: ['./character-creation.component.css'],
 })
 export class CharacterCreationComponent implements OnInit {
 
