@@ -1,0 +1,26 @@
+.character-token {
+    display: flex;
+    border: 2px solid rgb(112, 9, 208);
+    width: 8em;
+    font-size: 1.2em;
+}
+
+img {
+    width: 8em;
+    height: 8em;
+}
+
+
+
+@media (min-width:961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    img {
+        width: 7em;
+        height: 7em;
+        }
+    .character-token {
+        width: 7em;
+        height: 7em;
+        font-size: 1.3em;
+    }
+}
