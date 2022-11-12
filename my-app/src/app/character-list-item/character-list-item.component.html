@@ -1,3 +1,7 @@
-<app-character-token [character]="character"></app-character-token>
-<p>{{ character.name }}</p>
-<h4>{{ character.story.name }}</h4>
+<div class="list-item">
+  <app-character-token [character]="character"></app-character-token>
+  <div>
+    <p>{{ character.name }}</p>
+    <h5>{{ character.story.name }}</h5>
+  </div>
+</div>
