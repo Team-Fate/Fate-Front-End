@@ -75,4 +75,12 @@ export class FetchDataService {
   getCardById(id: any) {
     return this.httpClient.get(this.apiUrl + 'cards/' + id, this.getHeaders());
   }
+
+  createCharacter(data: any) {
+    return this.httpClient.post(
+      this.apiUrl + 'characters',
+      data,
+      this.getHeaders()
+    );
+  }
 }
