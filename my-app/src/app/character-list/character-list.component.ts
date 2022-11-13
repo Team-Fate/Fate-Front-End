@@ -38,7 +38,6 @@ export class CharacterListComponent implements OnInit {
       .subscribe((res: any) => {
         this.characterList = res;
         this.currentCharacter = this.characterList[0];
-        console.log(this.characterList);
       });
   }
 
