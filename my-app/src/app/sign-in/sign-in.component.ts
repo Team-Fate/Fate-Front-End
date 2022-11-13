@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FetchDataService } from './../services/fetch-data.service';
+import { FormValidatorService } from './../services/form-validator.service';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -10,7 +11,8 @@ import { FetchDataService } from './../services/fetch-data.service';
 export class SignInComponent implements OnInit {
   constructor(
     private _router: Router,
-    private fetchDataService: FetchDataService
+    private fetchDataService: FetchDataService,
+    private formValidator: FormValidatorService
   ) {}
 
   form = new FormGroup({
@@ -27,6 +29,7 @@ export class SignInComponent implements OnInit {
 
   submit() {
     if (this.form.status == 'INVALID') {
+      this.formValidator.validateAllFormFields(this.form);
       return;
     }
     const token = this.fetchDataService.signIn(this.form.value);

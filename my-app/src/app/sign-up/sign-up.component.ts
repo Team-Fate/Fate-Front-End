@@ -2,6 +2,7 @@ import { FetchDataService } from './../services/fetch-data.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FormValidatorService } from './../services/form-validator.service';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -11,7 +12,8 @@ export class SignUpComponent implements OnInit {
   // constructor(private _router: Router) {}
   constructor(
     private fetchDataService: FetchDataService,
-    private _router: Router
+    private _router: Router,
+    private formValidator: FormValidatorService
   ) {}
 
   form = new FormGroup(
@@ -44,6 +46,7 @@ export class SignUpComponent implements OnInit {
 
   submit() {
     if (this.form.status == 'INVALID') {
+      this.formValidator.validateAllFormFields(this.form);
       return;
     }
     const response = this.fetchDataService.signUp(this.form.value);
