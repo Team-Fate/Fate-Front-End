@@ -1,1 +1,6 @@
-<p>action-list works!</p>
+<div class="action-list">
+  <app-action-item
+    *ngFor="let action of this.actions"
+    [actionId]="action"
+  ></app-action-item>
+</div>

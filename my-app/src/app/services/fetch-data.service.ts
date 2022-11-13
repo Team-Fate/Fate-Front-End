@@ -83,4 +83,16 @@ export class FetchDataService {
       this.getHeaders()
     );
   }
+  getCharacterActions(id: any) {
+    return this.httpClient.get(
+      this.apiUrl + 'characters/' + id + '/actions',
+      this.getHeaders()
+    );
+  }
+  getActionById(id: any) {
+    return this.httpClient.get(
+      this.apiUrl + 'actions/' + id,
+      this.getHeaders()
+    );
+  }
 }
