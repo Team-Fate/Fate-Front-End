@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-status-bar',
   templateUrl: './status-bar.component.html',
-  styleUrls: ['./status-bar.component.css']
+  styleUrls: ['./status-bar.component.css'],
 })
 export class StatusBarComponent implements OnInit {
+  @Input() character: any;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
