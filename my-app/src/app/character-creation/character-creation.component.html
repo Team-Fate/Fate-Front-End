@@ -1,7 +1,7 @@
 <div class="creation-div">
   <form class="" [formGroup]="form" (ngSubmit)="submit()">
     <div class="name-input">
-      <p class="character-name">What is your name?</p>
+      <h1 class="character-name">What is your name?</h1>
       <input class="text-input" type="text" placeholder="Type Name Here!" formControlName='characterName'/>
       <p *ngIf="characterName.errors && characterName.touched">This field can not be empty</p>
     </div>
@@ -10,13 +10,13 @@
 
     <div class="creation-display">
       <div class="creation-model">
-        <p class="sprite-header">
+        <h1 class="sprite-header">
           Choose you're look!<!-- import character model here -->
-        </p>
+        </h1>
         <img class="sprite" src="{{ biker }}" alt="" />
       </div>
       <div class="creation-stats">
-        <p class="stats-header">ROLL YOUR STATS!</p>
+        <h1 class="stats-header">ROLL YOUR STATS!</h1>
         <div class="roll-stats">
           <app-character-stats></app-character-stats>
           <button class="btn glow-on-hover roll-button">ROLL</button>
