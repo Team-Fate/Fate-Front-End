@@ -6,6 +6,8 @@
   margin: 0 auto;
   width: 300px;
   height: 200px;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .flip-card {
@@ -63,4 +65,8 @@
 .flip-card-back > img {
   height: 50%;
   width: auto;
+}
+
+.available {
+  box-shadow: 30px 30px 30px 30px white;
 }

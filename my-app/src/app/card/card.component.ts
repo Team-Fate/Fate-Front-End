@@ -7,29 +7,37 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  @Input() cardId: any;
-  @Output() narratorText = new EventEmitter<String>();
+  @Input() cardObject: any;
+  @Input() cardIndex: any;
+  @Input() tokenPositionInput: any;
+  @Output() dataFromCard = new EventEmitter<any>();
   card: any;
   rotateCSS: any;
   rotate: any;
+  available: any;
   constructor(private fetchData: FetchDataService) {}
 
   ngOnInit(): void {
-    if (this.cardId == null) {
+    if (this.cardObject.cardId == null) {
       return;
     }
-    this.fetchData.getCardById(this.cardId).subscribe((card: any) => {
-      this.card = card;
-    });
+    this.fetchData
+      .getCardById(this.cardObject.cardId)
+      .subscribe((card: any) => {
+        this.card = card;
+      });
     this.rotate = false;
   }
 
   flipCard(event: any) {
-    console.log(event);
     if (!this.rotate) {
       this.rotateCSS = 'flip-card-rotate';
       this.rotate = true;
-      this.narratorText.emit(this.card.description);
+
+      this.dataFromCard.emit({
+        narratorText: this.card.description,
+        cardPosition: this.cardObject.cardStyle,
+      });
     }
   }
 }

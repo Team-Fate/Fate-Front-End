@@ -1,10 +1,19 @@
 <div class="story-container">
   <div class="story" style="display: grid" [ngStyle]="this.templateCSS">
-    <app-card *ngFor="let card of this.cards" [cardId]="card" (narratorText)="getNarratorTextFromCard($event)"></app-card>
+    <app-card
+      *ngFor="let card of this.cards"
+      [cardObject]="card"
+      [ngStyle]="card.cardStyle"
+      (dataFromCard)="getDataFromCard($event)"
+    ></app-card>
     <app-character-token
+      class="token"
       [ngStyle]="this.tokenPositionCSS"
       [character]="this.character"
     ></app-character-token>
   </div>
-  <app-narrator [text]="this.narratorText"></app-narrator>
+  <app-narrator
+    *ngIf="this.dataFromCard.narratorText"
+    [text]="this.dataFromCard.narratorText"
+  ></app-narrator>
 </div>

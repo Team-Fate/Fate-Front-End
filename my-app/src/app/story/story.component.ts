@@ -1,6 +1,7 @@
 import { FetchDataService } from './../services/fetch-data.service';
 import { Component, Input, OnInit, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-story',
@@ -12,8 +13,9 @@ export class StoryComponent implements OnInit {
   character: any;
   templateCSS: any;
   tokenPositionCSS: any;
-  cards: string[] = [];
-  narratorText: any;
+  cards: any[] = [];
+  dataFromCard: any;
+  tokenPosition: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,6 +26,10 @@ export class StoryComponent implements OnInit {
   ngOnInit(): void {
     this.getCharacter();
     this.templateCSS = this.prepareTemplateCSS();
+    this.dataFromCard = {
+      narratorText: '',
+      cardPosition: '',
+    };
   }
 
   ngOnDestroy() {
@@ -36,10 +42,26 @@ export class StoryComponent implements OnInit {
         .getCharacterById(params['character'])
         .subscribe((character: any) => {
           this.character = character;
-          this.tokenPositionCSS = character.story.tokenPosition;
-          this.character.story.cardsPosition.map((row: any) => {
-            row.map((card: any) => {
-              this.cards.push(card);
+          this.tokenPositionCSS = {
+            'grid-row': `${character.story.tokenPosition[0] + 1} / ${
+              character.story.tokenPosition[0] + 2
+            }`,
+            'grid-column': `${character.story.tokenPosition[1] + 1} / ${
+              character.story.tokenPosition[1] + 2
+            }`,
+          };
+
+          this.character.story.cardsPosition.map((row: any, i: number) => {
+            row.map((card: any, j: number) => {
+              const cardObject = {
+                cardId: card,
+                cardPosition: [i, j],
+                cardStyle: {
+                  'grid-row': `${i + 1} / ${i + 1 + 1}`,
+                  'grid-column': `${(j % 3) + 1} / ${(j % 3) + 1 + 1}`,
+                },
+              };
+              this.cards.push(cardObject);
             });
           });
         });
@@ -63,7 +85,8 @@ export class StoryComponent implements OnInit {
     return styles;
   }
 
-  getNarratorTextFromCard(narratorText: any) {
-    this.narratorText = narratorText;
+  getDataFromCard(dataFromCard: any) {
+    this.dataFromCard = dataFromCard;
+    this.tokenPositionCSS = this.dataFromCard.cardPosition;
   }
 }
