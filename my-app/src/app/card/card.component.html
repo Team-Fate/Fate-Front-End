@@ -1,14 +1,19 @@
-<div class="story-card">
-  <div class="flip-card">
+<div
+  class="story-card"
+  *ngIf="card"
+  (click)="flipCard($event)"
+  [ngClass]="available"
+>
+  <div class="flip-card" [ngClass]="rotateCSS">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <img src="" alt="card-image" />
-        <h1>Card Name</h1>
+        <img src="./assets/images/cardback.png" alt="card-image" />
       </div>
       <div class="flip-card-back">
-        <h1>Card Name</h1>
-        <h2>Card Type</h2>
-        <p>Card Description</p>
+        <img src="{{ card.image }}" alt="{{ card.name }}" />
+        <h3>{{ card.name }}</h3>
+        <h4>{{ card.type }}</h4>
+        <!-- <p>Card Description</p> -->
       </div>
     </div>
   </div>
