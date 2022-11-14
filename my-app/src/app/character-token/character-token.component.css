@@ -3,6 +3,7 @@
     border: 2px solid red;
     width: 8em;
     font-size: 1.2em;
+    border-radius: 10px;
 }
 
 img {
