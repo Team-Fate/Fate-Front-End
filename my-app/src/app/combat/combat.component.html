@@ -22,6 +22,8 @@
     <app-action-list
       class="character-action-list"
       [character]="character"
+      (selectedAction)="doAction($event)"
     ></app-action-list>
+    <app-battle-log class="battle-log" [log]="log"></app-battle-log>
   </div>
 </div>

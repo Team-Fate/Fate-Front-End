@@ -1,5 +1,5 @@
 import { FetchDataService } from './../services/fetch-data.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-action-item',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ActionItemComponent implements OnInit {
   @Input() actionId: any;
+  @Output() selectedAction = new EventEmitter<any>();
   action: any;
   constructor(private fetchData: FetchDataService) {}
 
@@ -17,5 +18,7 @@ export class ActionItemComponent implements OnInit {
     });
   }
 
-  doAction() {}
+  doAction() {
+    this.selectedAction.emit(this.action);
+  }
 }
