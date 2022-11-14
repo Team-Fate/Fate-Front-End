@@ -9,10 +9,5 @@ export class StatusBarComponent implements OnInit {
   @Input() character: any;
   constructor() {}
 
-  ngOnInit(): void {
-    this.character['status'] = {
-      currentHealth: 50,
-      maxHealth: 100,
-    };
-  }
+  ngOnInit(): void {}
 }

@@ -23,6 +23,7 @@ import { ActionListComponent } from './action-list/action-list.component';
 import { ActionItemComponent } from './action-item/action-item.component';
 import { MainComponent } from './main/main.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BattleLogComponent } from './battle-log/battle-log.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ActionListComponent,
     ActionItemComponent,
     MainComponent,
+    BattleLogComponent,
   ],
   imports: [
     HttpClientModule,

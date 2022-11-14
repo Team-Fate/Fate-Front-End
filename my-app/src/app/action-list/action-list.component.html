@@ -2,5 +2,6 @@
   <app-action-item
     *ngFor="let action of this.actions"
     [actionId]="action"
+    (selectedAction)="passAction($event)"
   ></app-action-item>
 </div>
