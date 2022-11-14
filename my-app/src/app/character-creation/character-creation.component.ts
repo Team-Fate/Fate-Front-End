@@ -11,9 +11,11 @@ import { FetchDataService } from './../services/fetch-data.service';
   styleUrls: ['./character-creation.component.css'],
 })
 export class CharacterCreationComponent implements OnInit {
-  biker = 'assets/images/Biker_idle.png';
-  cyborg = 'assets/images/Cyborg_idle.png';
-  punk = 'assets/images/Punk_idle.png';
+  // biker = 'assets/images/Biker_idle.png';
+  // cyborg = 'assets/images/Cyborg_idle.png';
+  // punk = 'assets/images/Punk_idle.png';
+  models = ['assets/images/Biker_idle.png', 'assets/images/Cyborg_idle.png', 'assets/image/Punk_idle.png']
+  currentIndex: any;
   character: any;
   constructor(
     private _router: Router,
@@ -23,8 +25,8 @@ export class CharacterCreationComponent implements OnInit {
   ) {}
   form = new FormGroup({
     characterName: new FormControl<string>('', Validators.required),
-    image: new FormControl<string>(this.biker),
-    model: new FormControl<string>(this.biker),
+    image: new FormControl<string>(this.models[0]),
+    model: new FormControl<string>(this.models[0]),
     stats: new FormControl<any>({ S: null, D: null, C: null, I: null }),
   });
   get characterName() {
@@ -46,6 +48,7 @@ export class CharacterCreationComponent implements OnInit {
       image: this.image.value,
       model: this.model.value,
     };
+    this.currentIndex = 0;
   }
 
   submit() {
@@ -67,5 +70,25 @@ export class CharacterCreationComponent implements OnInit {
 
   rollStats() {
     this.stats.setValue(this.rollDice.rollStats());
+  }
+  
+  clickLeft() {
+    if (this.currentIndex == 0) {
+      this.model.setValue(this.models[this.models.length - 1])
+      this.currentIndex = this.models.length - 1;
+    } else {
+      this.model.setValue(this.models[this.currentIndex + 1])
+      this.currentIndex += 1
+    }
+  }
+   clickRight() {
+        if (this.currentIndex == this.models.length - 1) {
+      this.model.setValue(this.models[0])
+      this.currentIndex = 0;
+    } else {
+      this.model.setValue(this.models[this.currentIndex - 1])
+      this.currentIndex -= 1
+    }
+
   }
 }

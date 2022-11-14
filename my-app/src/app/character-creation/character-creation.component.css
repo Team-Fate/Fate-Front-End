@@ -92,6 +92,11 @@
     margin-left: 30px;
     width: 30%;
 }
+.arrow {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
 
 @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
     .creation-div {
