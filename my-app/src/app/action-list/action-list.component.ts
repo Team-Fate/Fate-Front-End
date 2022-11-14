@@ -12,8 +12,12 @@ export class ActionListComponent implements OnInit {
   constructor(private fetchData: FetchDataService) {}
 
   ngOnInit(): void {
-    this.fetchData.getCharacterActions(this.character._id).subscribe((res) => {
-      this.actions = res;
-    });
+    if (this.character._id != undefined) {
+      this.fetchData
+        .getCharacterActions(this.character._id)
+        .subscribe((res) => {
+          this.actions = res;
+        });
+    }
   }
 }

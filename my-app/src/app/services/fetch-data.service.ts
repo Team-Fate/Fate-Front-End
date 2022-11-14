@@ -95,4 +95,7 @@ export class FetchDataService {
       this.getHeaders()
     );
   }
+  getNpcById(id: any) {
+    return this.httpClient.get(this.apiUrl + 'npcs/' + id, this.getHeaders());
+  }
 }
