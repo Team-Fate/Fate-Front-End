@@ -15,9 +15,11 @@ export class CardComponent implements OnInit {
   rotateCSS: any;
   rotate: any;
   available: any;
+  displayCombat: any;
   constructor(private fetchData: FetchDataService) {}
 
   ngOnInit(): void {
+    this.displayCombat = false;
     if (this.cardObject.cardId == null) {
       return;
     }
@@ -33,10 +35,10 @@ export class CardComponent implements OnInit {
     if (!this.rotate) {
       this.rotateCSS = 'flip-card-rotate';
       this.rotate = true;
-
       this.dataFromCard.emit({
         narratorText: this.card.description,
         cardPosition: this.cardObject.cardStyle,
+        enemyId: this.card.enemy,
       });
     }
   }

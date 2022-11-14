@@ -16,6 +16,8 @@ export class StoryComponent implements OnInit {
   cards: any[] = [];
   dataFromCard: any;
   tokenPosition: any;
+  currentEnemy: any;
+  displayCombat: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,7 +31,9 @@ export class StoryComponent implements OnInit {
     this.dataFromCard = {
       narratorText: '',
       cardPosition: '',
+      enemyId: '',
     };
+    this.displayCombat = false;
   }
 
   ngOnDestroy() {
@@ -87,6 +91,12 @@ export class StoryComponent implements OnInit {
 
   getDataFromCard(dataFromCard: any) {
     this.dataFromCard = dataFromCard;
-    this.tokenPositionCSS = this.dataFromCard.cardPosition;
+    this.tokenPositionCSS = dataFromCard.cardPosition;
+    if (dataFromCard.enemyId != undefined) {
+      this.fetchData.getNpcById(dataFromCard.enemyId).subscribe((res) => {
+        this.currentEnemy = res;
+        this.displayCombat = true;
+      });
+    }
   }
 }

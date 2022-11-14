@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-combat',
   templateUrl: './combat.component.html',
-  styleUrls: ['./combat.component.css']
+  styleUrls: ['./combat.component.css'],
 })
 export class CombatComponent implements OnInit {
+  @Input() character: any;
+  @Input() enemy: any;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -75,4 +75,27 @@ export class FetchDataService {
   getCardById(id: any) {
     return this.httpClient.get(this.apiUrl + 'cards/' + id, this.getHeaders());
   }
+
+  createCharacter(data: any) {
+    return this.httpClient.post(
+      this.apiUrl + 'characters',
+      data,
+      this.getHeaders()
+    );
+  }
+  getCharacterActions(id: any) {
+    return this.httpClient.get(
+      this.apiUrl + 'characters/' + id + '/actions',
+      this.getHeaders()
+    );
+  }
+  getActionById(id: any) {
+    return this.httpClient.get(
+      this.apiUrl + 'actions/' + id,
+      this.getHeaders()
+    );
+  }
+  getNpcById(id: any) {
+    return this.httpClient.get(this.apiUrl + 'npcs/' + id, this.getHeaders());
+  }
 }

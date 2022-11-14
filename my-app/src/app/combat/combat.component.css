@@ -1,0 +1,44 @@
+.modal {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.character-status-bar {
+  grid-area: character-status-bar;
+}
+.enemy-status-bar {
+  grid-area: enemy-status-bar;
+}
+.character-model {
+  grid-area: character-model;
+}
+.enemy-model {
+  grid-area: enemy-model;
+}
+.character-action-list {
+  grid-area: character-action-list;
+}
+.battle-log {
+  grid-area: battle-log;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 100px 50px 50px 100px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "character-status-bar . . enemy-status-bar"
+    "character-model . . enemy-model"
+    "character-action-list . . battle-log";
+}

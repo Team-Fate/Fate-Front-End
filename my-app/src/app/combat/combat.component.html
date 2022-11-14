@@ -1,8 +1,27 @@
-<!-- player -->
-<app-status-bar></app-status-bar>
-<app-character-model></app-character-model>
-<!-- npc - enemy -->
-<app-status-bar></app-status-bar>
-<app-character-model></app-character-model>
-<!-- action list -->
-<app-action-list></app-action-list>
+<div class="modal">
+  <div class="modal-content combat">
+    <!-- player -->
+    <app-status-bar
+      class="character-status-bar"
+      [character]="this.character"
+    ></app-status-bar>
+    <app-character-model
+      class="character-model"
+      [character]="this.character"
+    ></app-character-model>
+    <!-- npc - enemy -->
+    <app-status-bar
+      class="enemy-status-bar"
+      [character]="enemy"
+    ></app-status-bar>
+    <app-character-model
+      class="enemy-model"
+      [character]="enemy"
+    ></app-character-model>
+    <!-- action list -->
+    <app-action-list
+      class="character-action-list"
+      [character]="character"
+    ></app-action-list>
+  </div>
+</div>

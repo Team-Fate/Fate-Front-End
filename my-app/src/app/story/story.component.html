@@ -17,3 +17,8 @@
     [text]="this.dataFromCard.narratorText"
   ></app-narrator>
 </div>
+<app-combat
+  *ngIf="displayCombat"
+  [character]="this.character"
+  [enemy]="this.currentEnemy"
+></app-combat>

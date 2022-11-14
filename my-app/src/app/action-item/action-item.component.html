@@ -1,1 +1,5 @@
-<p>action-item works!</p>
+<div class="action-item" (click)="doAction()">
+  <p *ngIf="this.action">
+    {{ this.action.name }} ({{ this.action.description }})
+  </p>
+</div>

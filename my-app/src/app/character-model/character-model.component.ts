@@ -8,6 +8,5 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CharacterModelComponent implements OnInit {
   @Input() character: any;
   constructor() {}
-  biker = 'assets/images/Biker_idle.png'
   ngOnInit(): void {}
 }
