@@ -111,10 +111,11 @@
         margin: 0 auto;
     }
     .character-name {
-        margin-top: 1px;
+        margin-top: -15px;
+        font-size: 30px;
     }
     .text-input {
-        margin-top: -30px;
+        margin-top: 15px;
     }
     .name-input {
         display: flex;
@@ -122,14 +123,19 @@
         height: 0.5vh;
     }
     .sprite-header {
-        margin-top: 8px;
-        margin-bottom: 1px;
+        margin-top: 10px;
+        font-size: 30px;
     }
     .creation-display {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: auto;
+        height: 90vh;
+    }
+    .arrow-styling {
+        width: 70vw;
+        margin-top: -15px;
     }
     .creation-model {
         display: flex;
@@ -141,6 +147,7 @@
     .stats-header {
         margin-top: 1px;
         margin-bottom: -50px;
+        font-size: 30px;
     }
     .creation-stats {
         display: flex;
@@ -148,11 +155,15 @@
         align-items: center;
         width: auto;
         margin: 0 auto;
+        height: vh;
+        margin-top: -60px;
     }
     .button {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: -45px;
+        font-size: 15px;
     }
     .roll-stats {
         display: flex;
@@ -160,10 +171,15 @@
         align-items: center;
         width: auto;
         margin: 0 auto;
+        font-size: 15px;
+    }
+    .character-stats {
+        font-size: 15px;
     }
     .roll-button {
         margin: 0 auto;
         width: auto;
         margin-bottom: -50px;
+        height: auto;
     }
 }
