@@ -1,0 +1,120 @@
+ img {
+    width: 17em;
+    height: 17em;
+    border: 2px solid red;
+    border-radius: 10px;
+ }
+
+ .character-model {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    padding: auto;
+ }
+
+
+ @media only screen and (max-width: 1200px) and (min-width: 1050px) {
+
+     img {
+        height: 30em;
+        width: 28em;
+     }
+   
+ }
+
+ @media only screen and (max-width: 960px) and (min-width: 800px) {
+   img {
+         height: 19em;
+         width: 20em;
+      }
+   
+      .character-model {
+         padding-left: 3em;
+      }
+ }
+
+ @media only screen and (max-width: 1400px) and (min-width: 1201px) {
+   img {
+         height: 32em;
+         width: 34em;
+      }
+ }
+ 
+ @media only screen and (max-width: 1000px) and (min-width: 960px) {
+   img {
+         height: 20em;
+         width: 21em;
+
+      }
+   }
+
+ @media only screen and (max-width: 1050px) and (min-width: 1001px) {
+   img {
+         height: 24em;
+         width: 23em;
+      }
+ }
+
+
+
+ @media only screen and (max-width: 1400px) and (min-width: 1301px) {
+   img {
+         height: 34em;
+         width: 36em;
+      }
+ }
+
+ @media only screen and (max-width: 1600px) and (min-width: 1401px) {
+   img {
+         height: 35em;
+         width: 37em;
+      }
+   
+ }
+
+ @media only screen and (max-width: 1700px) and (min-width: 1601px) {
+    img {
+       height: 35em;
+       width: 37em;
+    }
+
+ }
+
+  @media only screen and (max-width: 1800px) and (min-width: 1701px) {
+     img {
+        height: 35em;
+        width: 37em;
+     }
+
+  }
+
+  @media only screen and (max-width: 2000px) and (min-width: 1801px) {
+   img {
+         height: 35em;
+         width: 37em;
+      }
+   
+   }
+
+ @media only screen and (max-width: 2200px) and (min-width: 2000px) {
+   img {
+         height: 35em;
+         width: 37em;
+      }
+   }
+
+
+@media only screen and (max-width: 800px) and (min-width: 601px) {
+   img {
+         height: 20em;
+         width: 17em;
+      }
+   
+      .character-model {
+         padding-left: 2em;
+         padding-top: 1em;
+      }
+
+}

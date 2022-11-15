@@ -1,0 +1,24 @@
+<div class="characters-container">
+  <h2>Choose Your Character</h2>
+  <div class="box">
+    <div>
+      <div class="flex" *ngFor="let character of characterList">
+        <app-character-list-item
+          [character]="character"
+          (click)="selectCharacter(character)"
+        ></app-character-list-item>
+      </div>
+    </div>
+    <app-character-model
+      [character]="this.currentCharacter"
+    ></app-character-model>
+  </div>
+  <div class="btn-box">
+    <button class="glow-on-hover btn" routerLink="/character-creation">
+      Create new character
+    </button>
+    <button class="glow-on-hover btn" (click)="continueFunction()">
+      Continue
+    </button>
+  </div>
+</div>
