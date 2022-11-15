@@ -5,6 +5,7 @@
 .creation-div {
     margin: auto;
     width: auto;
+    height: 100vh;
 }
 
 .character-name {
@@ -18,6 +19,7 @@
     justify-content: center;
     padding-top: 50px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .sprite-header {
@@ -39,12 +41,15 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .creation-stats {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     height: 55vh;
     margin-left: 150px;
@@ -54,6 +59,7 @@
 .button {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .sprite {
@@ -84,8 +90,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
 }
 
 .roll-button {
@@ -100,6 +107,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: auto;
 }
 
 @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
@@ -111,10 +119,11 @@
         margin: 0 auto;
     }
     .character-name {
-        margin-top: 1px;
+        margin-top: -15px;
+        font-size: 30px;
     }
     .text-input {
-        margin-top: -30px;
+        margin-top: 15px;
     }
     .name-input {
         display: flex;
@@ -122,14 +131,19 @@
         height: 0.5vh;
     }
     .sprite-header {
-        margin-top: 8px;
-        margin-bottom: 1px;
+        margin-top: 10px;
+        font-size: 30px;
     }
     .creation-display {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: auto;
+        height: 90vh;
+    }
+    .arrow-styling {
+        width: 70vw;
+        margin-top: -15px;
     }
     .creation-model {
         display: flex;
@@ -141,6 +155,7 @@
     .stats-header {
         margin-top: 1px;
         margin-bottom: -50px;
+        font-size: 30px;
     }
     .creation-stats {
         display: flex;
@@ -148,11 +163,15 @@
         align-items: center;
         width: auto;
         margin: 0 auto;
+        height: vh;
+        margin-top: -60px;
     }
     .button {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: -45px;
+        font-size: 15px;
     }
     .roll-stats {
         display: flex;
@@ -160,10 +179,15 @@
         align-items: center;
         width: auto;
         margin: 0 auto;
+        font-size: 15px;
+    }
+    .character-stats {
+        font-size: 15px;
     }
     .roll-button {
         margin: 0 auto;
         width: auto;
         margin-bottom: -50px;
+        height: auto;
     }
 }

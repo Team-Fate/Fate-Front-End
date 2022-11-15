@@ -1,5 +1,5 @@
  img {
-    width: 17em;
+    width: 100%;
     height: 17em;
     border: 2px solid red;
     border-radius: 10px;
@@ -21,7 +21,6 @@
         width: 32em;
      }
     .character-model {
-        padding-left: 10em;
         padding-top: .5em;
     }
  }
