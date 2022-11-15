@@ -1,3 +1,8 @@
 .action-item {
-  cursor: pointer;
+	cursor: pointer;
+	border: 1px solid silver;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

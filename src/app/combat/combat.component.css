@@ -11,10 +11,12 @@
 
 .character-status-bar {
 	grid-area: character-status-bar;
+	text-decoration: underline;
 }
 .enemy-status-bar {
 	grid-area: enemy-status-bar;
 	text-align: center;
+	text-decoration: underline;
 }
 .character-model {
 	grid-area: character-model;
@@ -24,18 +26,19 @@
 }
 .character-action-list {
 	grid-area: character-action-list;
+	margin-right: 3em;
 }
 .battle-log {
 	grid-area: battle-log;
 	overflow: auto;
 }
 .modal-content {
-	background-color: rgb(157, 156, 156);
-	margin: 15% auto;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 80%;
-	height: 80%;
+	background-color: rgb(0, 0, 0);
+	margin: auto;
+	padding: 10px;
+	border: 2px solid #888;
+	width: 95%;
+	height: 99%;
 	display: grid;
 	grid-template-columns: 250px 50px 50px 250px;
 	grid-template-rows: auto;
@@ -45,4 +48,13 @@
 		'character-action-list character-action-list . battle-log';
 	justify-content: center;
 	align-items: center;
+	gap: 2.5em;
+	text-align: center;
+	margin-bottom: 4em;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 300px) {
+	.modal-content {
+		gap: 0em;
+	}
 }

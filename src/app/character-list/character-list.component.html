@@ -1,6 +1,6 @@
 <div class="characters-container">
 	<h2>Choose Your Character</h2>
-	<div class="box">
+	<div class="box" *ngIf="characterList">
 		<div>
 			<div class="flex" *ngFor="let character of characterList">
 				<app-character-list-item
