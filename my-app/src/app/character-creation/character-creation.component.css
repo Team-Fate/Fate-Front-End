@@ -1,0 +1,193 @@
+.stat-list {
+    list-style-type: none;
+}
+
+.creation-div {
+    margin: auto;
+    width: auto;
+    height: 100vh;
+}
+
+.character-name {
+    font-size: 40px;
+}
+
+.name-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.sprite-header {
+    text-align: center;
+}
+
+.text-input {
+    width: 200px;
+    height: 30px;
+    margin-left: 20px;
+    border: solid 2px;
+    border-color: #7a00ff;
+    border-radius: 10px;
+    background-color: rgb(7, 7, 7);
+    color: white;
+}
+
+.creation-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.creation-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 55vh;
+    margin-left: 150px;
+    width: 30%;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sprite {
+    height: 75%;
+    border: 2px solid;
+    background-color: rgb(7, 7, 7);
+    padding-bottom: 60px;
+    padding-left: 50px;
+}
+
+.creation-model {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    align-items: center;
+    margin-right: 150px;
+}
+
+.sprite-header {
+    font-size: 35px;
+}
+
+.space {
+    margin: 5px;
+}
+
+.roll-stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.roll-button {
+    margin-left: 30px;
+    width: 30%;
+}
+.arrow {
+    height: auto;
+    width: 115px;
+}
+.arrow-styling {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+}
+
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    .creation-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+    }
+    .character-name {
+        margin-top: -15px;
+        font-size: 30px;
+    }
+    .text-input {
+        margin-top: 15px;
+    }
+    .name-input {
+        display: flex;
+        flex-direction: column;
+        height: 0.5vh;
+    }
+    .sprite-header {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+    .creation-display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        height: 90vh;
+    }
+    .arrow-styling {
+        width: 70vw;
+        margin-top: -15px;
+    }
+    .creation-model {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+    }
+    .stats-header {
+        margin-top: 1px;
+        margin-bottom: -50px;
+        font-size: 30px;
+    }
+    .creation-stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+        height: vh;
+        margin-top: -60px;
+    }
+    .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -45px;
+        font-size: 15px;
+    }
+    .roll-stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+    .character-stats {
+        font-size: 15px;
+    }
+    .roll-button {
+        margin: 0 auto;
+        width: auto;
+        margin-bottom: -50px;
+        height: auto;
+    }
+}

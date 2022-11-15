@@ -1,0 +1,29 @@
+<div class="modal">
+  <div class="modal-content combat">
+    <!-- player -->
+    <app-status-bar
+      class="character-status-bar"
+      [character]="this.character"
+    ></app-status-bar>
+    <app-character-model
+      class="character-model"
+      [character]="this.character"
+    ></app-character-model>
+    <!-- npc - enemy -->
+    <app-status-bar
+      class="enemy-status-bar"
+      [character]="enemy"
+    ></app-status-bar>
+    <app-character-model
+      class="enemy-model"
+      [character]="enemy"
+    ></app-character-model>
+    <!-- action list -->
+    <app-action-list
+      class="character-action-list"
+      [character]="character"
+      (selectedAction)="doAction($event)"
+    ></app-action-list>
+    <app-battle-log class="battle-log" [log]="log"></app-battle-log>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vh;
+    font-size: 30px;
+}
+
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    ul {
+        font-size: 20px;
+        margin-top: -35px;
+        margin-bottom: 10px;
+    }
+}
