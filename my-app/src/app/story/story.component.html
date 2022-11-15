@@ -1,5 +1,5 @@
 <div class="story-container">
-  <div class="story" style="display: grid" [ngStyle]="this.templateCSS">
+  <div class="story" style="display: grid" [ngStyle]="this.templateCSS" #story>
     <app-card
       *ngFor="let card of this.cards"
       [cardObject]="card"
