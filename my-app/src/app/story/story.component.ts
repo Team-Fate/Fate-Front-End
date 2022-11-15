@@ -1,7 +1,15 @@
 import { FetchDataService } from './../services/fetch-data.service';
-import { Component, Input, OnInit, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  EventEmitter,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { delay } from 'rxjs';
+declare var animateCSSGrid: any;
 
 @Component({
   selector: 'app-story',
@@ -9,6 +17,7 @@ import { delay } from 'rxjs';
   styleUrls: ['./story.component.css'],
 })
 export class StoryComponent implements OnInit {
+  @ViewChild('story', { static: true }) public story: any;
   sub: any;
   character: any;
   templateCSS: any;
@@ -98,5 +107,6 @@ export class StoryComponent implements OnInit {
         this.displayCombat = true;
       });
     }
+    animateCSSGrid.wrapGrid(this.story.nativeElement).forceGridAnimation();
   }
 }

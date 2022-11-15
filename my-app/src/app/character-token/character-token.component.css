@@ -1,26 +1,33 @@
 .character-token {
     display: flex;
-    border: 2px solid rgb(112, 9, 208);
+    border: 2px solid red;
     width: 8em;
     font-size: 1.2em;
+    border-radius: 10px;
 }
 
 img {
-    width: 8em;
-    height: 8em;
+  width: 8em;
+  height: 8em;
 }
 
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  img {
+    width: 7em;
+    height: 7em;
+  }
+  .character-token {
+    width: 7em;
+    height: 7em;
+    font-size: 1.3em;
+  }
+}
 
-
-@media (min-width:961px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-    img {
-        width: 7em;
-        height: 7em;
-        }
+@media only screen and (max-width: 500px) and (min-width: 380px) {
     .character-token {
-        width: 7em;
-        height: 7em;
-        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

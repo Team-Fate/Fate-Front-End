@@ -1,5 +1,5 @@
 import { FetchDataService } from './../services/fetch-data.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-action-list',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ActionListComponent implements OnInit {
   @Input() character: any;
+  @Output() selectedAction = new EventEmitter<any>();
   actions: any;
   constructor(private fetchData: FetchDataService) {}
 
@@ -19,5 +20,8 @@ export class ActionListComponent implements OnInit {
           this.actions = res;
         });
     }
+  }
+  passAction(selectedAction: any) {
+    this.selectedAction.emit(selectedAction);
   }
 }

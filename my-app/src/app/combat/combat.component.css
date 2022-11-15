@@ -26,6 +26,7 @@
 }
 .battle-log {
   grid-area: battle-log;
+  overflow: auto;
 }
 .modal-content {
   background-color: #fefefe;
@@ -35,10 +36,10 @@
   width: 80%;
   height: 80%;
   display: grid;
-  grid-template-columns: 100px 50px 50px 100px;
+  grid-template-columns: 250px 50px 50px 250px;
   grid-template-rows: auto;
   grid-template-areas:
     "character-status-bar . . enemy-status-bar"
     "character-model . . enemy-model"
-    "character-action-list . . battle-log";
+    "character-action-list character-action-list . battle-log";
 }
