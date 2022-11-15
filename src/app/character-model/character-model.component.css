@@ -16,8 +16,8 @@ img {
 
 @media only screen and (max-width: 1200px) and (min-width: 1050px) {
 	img {
-		height: 30em;
-		width: 28em;
+		height: 23em;
+		width: 22em;
 	}
 }
 
@@ -34,8 +34,8 @@ img {
 
 @media only screen and (max-width: 1400px) and (min-width: 1201px) {
 	img {
-		height: 32em;
-		width: 34em;
+		height: 24em;
+		width: 23em;
 	}
 }
 
@@ -55,43 +55,43 @@ img {
 
 @media only screen and (max-width: 1400px) and (min-width: 1301px) {
 	img {
-		height: 34em;
-		width: 36em;
+		height: 25em;
+		width: 24em;
 	}
 }
 
 @media only screen and (max-width: 1600px) and (min-width: 1401px) {
 	img {
-		height: 35em;
-		width: 37em;
+		height: 26em;
+		width: 25em;
 	}
 }
 
 @media only screen and (max-width: 1700px) and (min-width: 1601px) {
 	img {
-		height: 35em;
-		width: 37em;
+		height: 27em;
+		width: 26em;
 	}
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1701px) {
 	img {
-		height: 35em;
-		width: 37em;
+		height: 27em;
+		width: 26em;
 	}
 }
 
 @media only screen and (max-width: 2000px) and (min-width: 1801px) {
 	img {
-		height: 35em;
-		width: 37em;
+		height: 28em;
+		width: 27em;
 	}
 }
 
 @media only screen and (max-width: 2200px) and (min-width: 2000px) {
 	img {
-		height: 35em;
-		width: 37em;
+		height: 30em;
+		width: 28em;
 	}
 }
 
