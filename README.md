@@ -15,7 +15,9 @@ In this project we used Angular, TypeScript, HTML, and CSS.
 
 ## Getting Started
 Heroku Link https://your-fate-front-end.herokuapp.com/
+
 Github Link https://github.com/Team-Fate/Fate-Front-End
+
 You can fork and clone this repository and start the app in your terminal using npm i then npm start.
 
 ## Contribution Guidelines
