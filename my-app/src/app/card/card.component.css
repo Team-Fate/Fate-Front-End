@@ -4,10 +4,11 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  width: 300px;
+  width: auto;
   height: 200px;
   z-index: 1;
   cursor: pointer;
+  
 }
 
 .flip-card {
@@ -51,7 +52,7 @@
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: white;
+  background-color: rgb(158, 176, 200, 0.8);
   color: black;
 }
 

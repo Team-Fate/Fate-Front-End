@@ -7,6 +7,7 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+
 }
 
 .character-status-bar {
@@ -14,9 +15,11 @@
 }
 .enemy-status-bar {
   grid-area: enemy-status-bar;
+  text-align: center;
 }
 .character-model {
   grid-area: character-model;
+  
 }
 .enemy-model {
   grid-area: enemy-model;
@@ -29,7 +32,7 @@
   overflow: auto;
 }
 .modal-content {
-  background-color: #fefefe;
+  background-color: rgb(157, 156, 156);
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
@@ -42,4 +45,7 @@
     "character-status-bar . . enemy-status-bar"
     "character-model . . enemy-model"
     "character-action-list character-action-list . battle-log";
+    justify-content: center;
+    align-items: center;
+  
 }

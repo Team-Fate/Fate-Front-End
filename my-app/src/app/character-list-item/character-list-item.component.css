@@ -4,6 +4,9 @@
     gap: 1em;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
+    border: 1px solid silver;
+    margin: 1em;
+    
 }
 
 p {
@@ -33,6 +36,10 @@ h5 {
         width: 280px;
         margin-left: 3.3em
     }
+
+    p {
+        font-size: 2em;
+    }
 }
 
 @media only screen and (max-width: 650px) and (min-width: 500px) {
@@ -56,7 +63,7 @@ h5 {
 @media only screen and (max-width: 2400px) and (min-width: 1800px) {
     .list-item {
         width: 550px;
-        margin-left: 8em;
+        margin-left: 2em;
     }
 }
 
@@ -71,5 +78,11 @@ h5 {
 @media only screen and (max-width: 999px) and (min-width: 800px) {
     .list-item {
         width: 300px;
+    }
+}
+
+@media only screen and (max-width: 960px) and (min-width: 500px) {
+    p {
+        font-size: 2em;
     }
 }
