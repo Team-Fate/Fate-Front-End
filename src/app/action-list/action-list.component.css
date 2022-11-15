@@ -1,0 +1,8 @@
+.action-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	gap: 3em;
+	align-items: center;
+}
