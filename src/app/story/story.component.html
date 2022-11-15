@@ -21,4 +21,5 @@
   *ngIf="displayCombat"
   [character]="this.character"
   [enemy]="this.currentEnemy"
+  (combatResult)="getCombatResult($event)"
 ></app-combat>
