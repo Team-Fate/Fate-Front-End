@@ -14,7 +14,7 @@ When creating this game we wanted to have a functioning user sign-up and sign-in
 In this project we used Angular, TypeScript, HTML, and CSS.
 
 ## Getting Started
-Netlifly Link 
+Heroku Link https://your-fate-front-end.herokuapp.com/
 Github Link https://github.com/Team-Fate/Fate-Front-End
 You can fork and clone this repository and start the app in your terminal using npm i then npm start.
 
