@@ -109,4 +109,9 @@ export class StoryComponent implements OnInit {
     }
     animateCSSGrid.wrapGrid(this.story.nativeElement).forceGridAnimation();
   }
+
+  getCombatResult(dataFromCombat: any) {
+    console.log(dataFromCombat);
+    this.displayCombat = false;
+  }
 }

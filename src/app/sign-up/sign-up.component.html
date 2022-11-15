@@ -1,41 +1,42 @@
 <form class="form" [formGroup]="form" (ngSubmit)="submit()">
-  <div class="form-group">
-    <label>First name:</label>
-    <input type="text" formControlName="firstname" />
-    <p *ngIf="firstname.errors && firstname.touched">
-      This field can not be empty
-    </p>
-  </div>
-  <div class="form-group">
-    <label>Last name</label>
-    <input type="text" formControlName="lastname" />
-    <p *ngIf="lastname.errors && lastname.touched">
-      This field can not be empty
-    </p>
-  </div>
-  <div class="form-group">
-    <label>Email:</label>
-    <input type="text" formControlName="email" />
-    <p *ngIf="email.errors && email.touched">This field can not be empty</p>
-  </div>
-  <div class="form-group">
-    <label>Username:</label>
-    <input type="text" formControlName="username" required />
-    <p *ngIf="username.errors && username.touched">
-      This field can not be empty
-    </p>
-  </div>
-  <div class="form-group">
-    <label>Password:</label>
-    <input type="password" formControlName="password" required />
-    <p *ngIf="password.errors && password.touched">
-      This field can not be empty
-    </p>
-  </div>
-  <!-- <label>Confirm Password:</label>
+	<div class="form-group">
+		<label>First name:</label>
+		<input type="text" formControlName="firstname" />
+		<p *ngIf="firstname.errors && firstname.touched">
+			This field can not be empty
+		</p>
+	</div>
+	<div class="form-group">
+		<label>Last name</label>
+		<input type="text" formControlName="lastname" />
+		<p *ngIf="lastname.errors && lastname.touched">
+			This field can not be empty
+		</p>
+	</div>
+	<div class="form-group">
+		<label>Email:</label>
+		<input type="text" formControlName="email" />
+		<p *ngIf="email.errors && email.touched">This field can not be empty</p>
+	</div>
+	<div class="form-group">
+		<label>Username:</label>
+		<input type="text" formControlName="username" required />
+		<p *ngIf="username.errors && username.touched">
+			This field can not be empty
+		</p>
+	</div>
+	<div class="form-group">
+		<label>Password:</label>
+		<input type="password" formControlName="password" required />
+		<p *ngIf="password.errors && password.touched">
+			This field can not be empty
+		</p>
+	</div>
+	<!-- <label>Confirm Password:</label>
   <input type="text" formControlName="confirmPassword" /> -->
-  <button class="btn glow-on-hover" type="submit">Create Account</button>
-  <button class="btn glow-on-hover" type="button" (click)="cancelFunction()">
-    Cancel
-  </button>
+	<p *ngIf="error">{{ this.error }}</p>
+	<button class="btn glow-on-hover" type="submit">Create Account</button>
+	<button class="btn glow-on-hover" type="button" (click)="cancelFunction()">
+		Cancel
+	</button>
 </form>
