@@ -1,75 +1,84 @@
 .list-item {
-    display: flex;
-    width: 280px;
-    gap: 1em;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 20px;
+	display: flex;
+	width: 280px;
+	gap: 1em;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
+	border: 1px solid silver;
+	margin: 1em;
 }
 
 p {
-    font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 h5 {
-    font-size: 1em;
-    padding-bottom: .2em;
+	font-size: 1em;
+	padding-bottom: 0.2em;
 }
 
 @media only screen and (max-width: 2200px) and (min-width: 960px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-    .list-item {
-        width: 400px;
-        margin-left: 2.3em;
-    }
+	/* tablet, landscape iPad, lo-res laptops ands desktops */
+	.list-item {
+		width: 400px;
+		margin-left: 2.3em;
+	}
 
-    p {
-        font-size: 1.7em;
-    }
-    
+	p {
+		font-size: 1.7em;
+	}
 }
 
 @media only screen and (max-width: 500px) and (min-width: 300px) {
-    .list-item {
-        width: 280px;
-        margin-left: 3.3em
-    }
+	.list-item {
+		width: 280px;
+		margin-left: 3.3em;
+	}
+
+	p {
+		font-size: 2em;
+	}
 }
 
 @media only screen and (max-width: 650px) and (min-width: 500px) {
-    .list-item {
-        width: 280px;
-        margin-left: 7em;
-    }
+	.list-item {
+		width: 280px;
+		margin-left: 7em;
+	}
 }
 @media only screen and (max-width: 650px) and (min-width: 650px) {
-    .list-item {
-        margin: auto;
-    }
+	.list-item {
+		margin: auto;
+	}
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1000px) {
-    .list-item {
-        width: 440px;
-    }
+	.list-item {
+		width: 440px;
+	}
 }
 
 @media only screen and (max-width: 2400px) and (min-width: 1800px) {
-    .list-item {
-        width: 550px;
-        margin-left: 8em;
-    }
+	.list-item {
+		width: 550px;
+		margin-left: 2em;
+	}
 }
 
-
-
 @media only screen and (max-width: 1250px) and (min-width: 1000px) {
-    .list-item {
-        margin-left: 1em;
-    }
+	.list-item {
+		margin-left: 1em;
+	}
 }
 
 @media only screen and (max-width: 999px) and (min-width: 800px) {
-    .list-item {
-        width: 300px;
-    }
+	.list-item {
+		width: 300px;
+	}
+}
+
+@media only screen and (max-width: 960px) and (min-width: 500px) {
+	p {
+		font-size: 2em;
+	}
 }
