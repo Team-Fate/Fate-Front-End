@@ -13,6 +13,9 @@ When creating this game we wanted to have a functioning user sign-up and sign-in
 ## Technologies Used
 In this project we used Angular, TypeScript, HTML, and CSS.
 
+## Planning Directory
+https://github.com/Team-Fate/Planning-Directory
+
 ## Getting Started
 Heroku Link https://your-fate-front-end.herokuapp.com/
 
